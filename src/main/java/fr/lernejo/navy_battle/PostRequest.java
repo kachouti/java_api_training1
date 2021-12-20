@@ -33,6 +33,9 @@ public class PostRequest {
         
     }
 
+    public int getMyPort() {
+        return myPort;
+    }
     
     
 }

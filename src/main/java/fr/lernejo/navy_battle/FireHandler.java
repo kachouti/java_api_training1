@@ -16,8 +16,7 @@ public class FireHandler implements HttpHandler {
         else {
             String vars = exchange.getRequestURI().getQuery();
             String cell = vars.split("=")[1];
-            String var1 = cell.substring(0, 1);
-            String var2 = cell.substring(1);
+            
             verbe = reponse(exchange);
         }
         exchange.sendResponseHeaders(resp, verbe.length());
@@ -33,5 +32,19 @@ public class FireHandler implements HttpHandler {
         return jsonPar.toString();
     }
 
+     public String getVerbe() {
+        return verbe;
+    }
+
+    public int getResp() {
+        return resp;
+    }
     
 }
+
+
+
+
+
+
+
