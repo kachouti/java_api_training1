@@ -20,6 +20,7 @@ public class serverHttp {
         srv.setExecutor(Executors.newFixedThreadPool(1));//utiliser com.sun.net.httpserver.HttpServer#create
         srv.createContext("/ping", new CallHandler());//Utiliser la méthode createContext pour associer au chemin /ping une implémentation de CallHandler qui renverra une trame HTTP de statut OK (200) et de corps OK
     srv.createContext("/api/game/start", new PostHandler());
+            srv.createContext("/api/game/fire", new FireHandler());
 
        // srv.createContext("/api/game/start", new PostHandler());//Ajouter un contexte pour le chemin /api/game/start qui répondra au verbe POST
         srv.start();
