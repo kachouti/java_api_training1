@@ -4,12 +4,11 @@ import org.junit.jupiter.api.Test;
 
 
 public class FireHandlerTest {
-    private final serverHttp server = new serverHttp(80889);
     private final FireHandler fireHandler = new FireHandler();
 
     @Test
     void verbe_test_Not_Found() {
-        org.assertj.core.api.Assertions.assertThat(fireHandler.getVerbe()).isEqualTo("Not Found");
+        org.assertj.core.api.Assertions.assertThat(fireHandler.getVerbe()).isEqualTo(" Not Found ");
     }
 
     @Test
